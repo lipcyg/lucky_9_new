@@ -659,9 +659,45 @@ button.card:focus-visible {
   }
 
   .entry-grid,
-  .lobby-grid,
-  .table-zone {
+  .lobby-grid {
     grid-template-columns: 1fr;
+  }
+
+  .table-zone {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .pile {
+    min-height: 154px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .pile-card {
+    min-height: 76px;
+  }
+
+  .pile .card {
+    width: 50px;
+    height: 70px;
+    padding: 5px;
+    border-radius: 7px;
+  }
+
+  .pile .card-rank {
+    top: 5px;
+    left: 6px;
+    font-size: 0.78rem;
+  }
+
+  .pile .card-suit {
+    font-size: 1.3rem;
+  }
+
+  .pile .card-value {
+    display: none;
   }
 
   .score-band {
@@ -670,19 +706,43 @@ button.card:focus-visible {
   }
 
   .session-code-panel,
-  .turn-banner,
   .pile-footer,
   .hand-heading {
     align-items: stretch;
     flex-direction: column;
   }
 
+  .turn-banner {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .turn-banner > div:first-child {
+    flex: 1 1 150px;
+    min-width: 0;
+  }
+
   .turn-banner .ghost-button {
-    align-self: flex-start;
+    align-self: center;
+    padding: 0 12px;
   }
 
   .turn-timer {
-    align-self: flex-start;
+    align-self: center;
+  }
+
+  .pile-footer {
+    gap: 6px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  .pile-footer button {
+    width: 100%;
+    min-height: 38px;
+    padding: 0 8px;
   }
 
   .card {
@@ -728,5 +788,9 @@ button.card:focus-visible {
 
   .game-actions {
     grid-template-columns: 1fr;
+  }
+
+  .table-zone {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

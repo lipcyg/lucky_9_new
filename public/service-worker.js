@@ -1,4 +1,4 @@
-const CACHE_NAME = "lucky9-v7";
+const CACHE_NAME = "lucky9-v8";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
