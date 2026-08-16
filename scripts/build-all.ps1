@@ -82,12 +82,12 @@ function Normalize-ServerUrl {
     throw "ServerUrl must be a valid absolute http or https URL."
   }
 
-  $host = $uri.Host.ToLowerInvariant()
+  $serverHost = $uri.Host.ToLowerInvariant()
 
   if (
-    $host -eq "your-permanent-lucky9-server.com" -or
-    $host -match "(^|\.)example\." -or
-    $host -match "^(your-|replace-)"
+    $serverHost -eq "your-permanent-lucky9-server.com" -or
+    $serverHost -match "(^|\.)example\." -or
+    $serverHost -match "^(your-|replace-)"
   ) {
     throw "ServerUrl is still a placeholder. Replace it with your real Lucky 9 server URL."
   }
