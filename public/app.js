@@ -572,6 +572,19 @@ function renderActions(round, viewerHand, isTurn) {
   const canShow =
     isTurn && (round.phase === "discard" || round.phase === "show_or_end") && viewerHand && viewerHand.total <= 9;
 
+  if (isTurn && round.phase === "draw") {
+    return `
+      <section class="action-strip game-actions">
+        <button class="primary-button" type="button" data-action="draw-stack" ${busy ? "disabled" : ""}>
+          Draw Stack
+        </button>
+        <button class="secondary-button" type="button" data-action="draw-open" ${round.openPileTop && !busy ? "" : "disabled"}>
+          Draw Open
+        </button>
+      </section>
+    `;
+  }
+
   return `
     <section class="action-strip game-actions">
       <button class="primary-button" type="button" data-action="discard" ${canDiscard && !busy ? "" : "disabled"}>
