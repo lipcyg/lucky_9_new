@@ -1,0 +1,22 @@
+{
+  "name": "lucky9",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lucky 9 multiplayer card game for Windows, Android, and iOS via an installable web client.",
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-all.ps1",
+    "build:all": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-all.ps1",
+    "server:start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-server.ps1",
+    "start": "node server/index.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1"
+  }
+}

@@ -1,0 +1,14 @@
+.git
+.agents
+.codex
+.tools
+.pnpm-store
+android
+build
+coverage
+dist
+node_modules
+*.log
+.android-env.ps1
+.tmp
+.tmp-*

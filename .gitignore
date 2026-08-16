@@ -1,0 +1,11 @@
+node_modules/
+.tools/
+.pnpm-store/
+.android-env.ps1
+.DS_Store
+*.log
+.env
+coverage/
+dist/
+build/
+.tmp/

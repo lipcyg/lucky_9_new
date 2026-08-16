@@ -1,0 +1,8 @@
+{
+  "appId": "com.lucky9.game",
+  "appName": "Lucky9",
+  "webDir": "public",
+  "server": {
+    "cleartext": true
+  }
+}
