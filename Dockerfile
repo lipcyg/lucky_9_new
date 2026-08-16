@@ -2,6 +2,7 @@ FROM node:22-alpine
 
 WORKDIR /app
 ENV NODE_ENV=production
+ENV PORT=4179
 
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
