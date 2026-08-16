@@ -40,6 +40,7 @@ dist\android\app-debug.apk
 
 See `docs\build-and-run.md` for Windows, Android, and iOS notes.
 See `docs\back4app-free-deploy.md` for the recommended no-credit-card internet-hosting path.
+See `docs\github-pages-web.md` for the free auto-updating browser/mobile web frontend.
 See `docs\northflank-free-deploy.md` for the Northflank path if your account supports Sandbox without payment details.
 
 ## Test

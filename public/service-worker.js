@@ -1,11 +1,11 @@
-const CACHE_NAME = "lucky9-v8";
+const CACHE_NAME = "lucky9-v9";
 const STATIC_ASSETS = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/manifest.webmanifest",
-  "/icon.svg"
+  "./",
+  "index.html",
+  "styles.css",
+  "app.js",
+  "manifest.webmanifest",
+  "icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
@@ -26,7 +26,7 @@ self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
   if (
-    requestUrl.pathname === "/config.js" ||
+    requestUrl.pathname.endsWith("/config.js") ||
     requestUrl.pathname.startsWith("/api/") ||
     requestUrl.pathname.endsWith("/events")
   ) {
